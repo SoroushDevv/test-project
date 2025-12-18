@@ -42,13 +42,13 @@ export default function ProductCard({ product }) {
       },
     });}
     return (
-      <Link to={`product/${product.id}`} className="border p-4 flex flex-col items-center rounded shadow hover:shadow-lg transition-shadow">
+      <div  className="border p-4 flex flex-col items-center rounded shadow hover:shadow-lg transition-shadow">
         <img
           src={product.image}
           alt={product.title}
           className="h-40 w-40 object-contain mb-2"
         />
-        <div  className="text-sm font-semibold text-center text-inherit">{product.title}</div>
+        <Link to={`product/${product.id}`} className="text-sm font-semibold text-center text-inherit">{product.title}</Link>
         <p className="text-xs text-gray-500 mt-1">{product.category}</p>
         <p className="font-bold mt-1">${product.price}</p>
 
@@ -82,6 +82,6 @@ export default function ProductCard({ product }) {
             افزودن به سبد خرید
           </button>
         )}
-      </Link>
+      </div>
     );
   }
