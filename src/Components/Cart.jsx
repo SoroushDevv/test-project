@@ -5,7 +5,6 @@ export default function Cart() {
   const { updateQuantity, removeFromCart } = useContext(CartContext);
   const [cart, setCart] = useState([]);
 
-  // بارگذاری اولیه از localStorage
   useEffect(() => {
     const storedCart = localStorage.getItem("cart");
     if (storedCart) {
@@ -13,12 +12,10 @@ export default function Cart() {
     }
   }, []);
 
-  // همگام سازی با localStorage هنگام تغییر cart
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
-  // توابع تغییر تعداد و حذف محصول
   const handleUpdateQuantity = (id, quantity) => {
     setCart((prev) =>
       prev.map((item) =>

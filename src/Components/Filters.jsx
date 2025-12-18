@@ -54,7 +54,7 @@ export default function Filters({
       <select
         value={category}
         onChange={(e) => setCategory(e.target.value)}
-        className="focus:outline-none p-2 border-2 border-gray-500 border-md"
+        className="focus:outline-none p-2 border-2 border-gray-500 rounded-md"
       >
         <option value="">همه دسته‌ها</option>
         {categoryOptions.map((c) => (
@@ -67,7 +67,7 @@ export default function Filters({
       <select
         value={sort}
         onChange={(e) => setSort(e.target.value)}
-        className="focus:outline-none p-2 border-2 border-gray-500 border-md"
+        className="focus:outline-none p-2 border-2 border-gray-500 rounded-md"
       >
         {sortOptions.map((s) => (
           <option key={s.value} value={s.value}>
